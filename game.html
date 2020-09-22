@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Busca Foto - UO251436</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style/main.css">
+  <link rel="stylesheet" href="style/game.css">
+
+  <noscript>Necsitas activar JavaScript para jugar.</noscript>
+
+  <script src="https://maps.googleapis.com/maps/api/js?key=MAPS_API_KEY&libraries=geometry"></script>
+
+</head>
+
+<body>
+
+  <div id="main">
+    <article class="game">
+      <section class="question-container">
+        <section class="map game-element">
+        </section>
+      </section>
+
+      <!-- <hr/> -->
+
+      <section class="state-container">
+        <section class="photo game-element">
+          <div id="photo">
+          </div>
+        </section>
+        <section class="score game-element">
+          <div id="score">
+            <section class="controls">
+              <div class="arrows">
+                <button disabled id="prev"><em class="fa fa-arrow-left"></em></button>
+                Pregunta <span id="current">1</span> / <span id="total">10</span>
+                <button id="next"><em class="fa fa-arrow-right"></em></button>
+              </div>
+              <button id="check">Comprobar respuesta</button>
+            </section>
+            <section class="status">
+              <p>Tiempo transcurrido: <span id="time-current">00:00:00</span></p>
+              <p>Puntuación total: <span id="score-current">0</span></p>
+            </section>
+            <section class="controls">
+              <a href="index.html"><button>Volver a inicio</button></a>
+              <a href="results.html"><button id="finish" disabled="" >Finalizar</button></a>
+            </section>
+          </div>
+        </section>
+      </section>
+
+    </article>
+
+    <footer class="footer">
+      <a target="_blank" href="https://github.com/ulitol97/SIG-GeoGuessr"><em class="fa fa-github"></em></a> Eduardo
+      Ulibarri Toledo (UO251436)
+    </footer>
+
+  </div>
+
+  <!-- JS -->
+  <script src="js/statue.js"></script>
+  <script src="js/game.js"></script>
+
+</body>
+
+</html>

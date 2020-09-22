@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Busca Foto - UO251436</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style/main.css">
+  <link rel="stylesheet" href="style/home.css">
+
+  <noscript>Necesitas activar JavaScript para jugar.</noscript>
+
+</head>
+
+<body>
+
+  <div id="main">
+    <article class="home">
+      <section class="transparent title-container">
+        <h1 class="title">Buscar foto</h1>
+        <h3 class="title">Resultados</h3>
+      </section>
+      <section class="transparent results-container">
+
+      </section>
+
+      <section class="transparent btn-container">
+        <form action="game.html">
+          <input type="submit" value="Jugar de nuevo" />
+        </form>
+      </section>
+
+    </article>
+
+    <footer class="footer">
+      <a target="_blank" href="https://github.com/ulitol97/SIG-GeoGuessr"><em class="fa fa-github"></em></a> Eduardo
+      Ulibarri Toledo (UO251436)
+    </footer>
+
+  </div>
+
+  <!-- JS -->
+  <script>
+
+    const transtitionLenght = 0.75
+    window.addEventListener("load", () => {
+
+      const titleContainer = document.querySelector(".title-container.transparent");
+      const resultsContainer = document.querySelector(".results-container.transparent");
+
+      try {
+        const urlParams = new URLSearchParams(window.location.search);
+
+        const time = parseInt(urlParams.get('time'));
+        const timeElapsed = new Date(time * 1000).toISOString().substr(11, 8);
+        console.log("TIME: ", timeElapsed)
+
+
+        const scores = JSON.parse(urlParams.get('scores'));
+        const totalScore = urlParams.get('total');
+
+        // Write results to HTML.
+        for (let i = 0; i < scores.length; i++) {
+          resultsContainer.innerHTML += `<p>Pregunta ${i + 1}: <em>${scores[i]} puntos</em>.</p>`;
+        }
+        resultsContainer.innerHTML += `<br/><p><b>Total: <em>${totalScore} puntos</em>.</b></p>`;
+        resultsContainer.innerHTML += `<p><b>Tiempo: <em>${timeElapsed}</em>.</b></p>`;
+
+      }
+      catch (e) {
+        throw (e)
+        resultsContainer.innerHTML = `<p>No se pudieron procesar los resultados.</p>`;
+      }
+
+
+      titleContainer.classList.replace("transparent", "opaque")
+
+      setTimeout(() => {
+        resultsContainer.classList.replace("transparent", "opaque");
+
+        setTimeout(() => {
+          document.querySelector(".btn-container.transparent").classList.replace("transparent", "opaque")
+        }
+          , transtitionLenght * 1000
+        )
+
+      }
+        , transtitionLenght * 1000
+      )
+    })
+  </script>
+
+</body>
+
+</html>

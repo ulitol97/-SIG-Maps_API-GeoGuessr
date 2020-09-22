@@ -1,0 +1,49 @@
+#main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+article.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin: 8px;
+  padding: 8px;
+  text-align: center;
+}
+
+[class$="container"] {
+  transition: opacity 0.75s linear;
+  text-align: center;
+  padding: 10px;
+  margin: 10px;
+  margin-bottom: 10%;
+}
+
+input[type="submit"] {
+  transition: all 0.4s linear;
+}
+
+input[type="submit"]:hover {
+  background-color: navy;
+}
+
+form input {
+  background-color: black;
+  font-size: 1.5rem;
+  padding: 5px 15px;
+  border-radius: 10%;
+  cursor: pointer;
+}
+
+h1.title {
+  font-size: 1.5rem;
+}
+
+h3.title {
+  font-size: 1.1rem;
+}

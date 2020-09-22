@@ -1,0 +1,23 @@
+TAREA: Juego localización fotos
+ALUMNO: Eduardo Ulibarri Toledo (uo251436)
+
+INSTRUCCIONES:
+  El juego trata la temática de estatuas en el centro de Oviedo. Con este fin, se ha restringido el
+  movimiento del mapa al centro de Oviedo y alrededores. Se permite hacer "zoom" y desplazarse dentro
+  de estos límites.
+
+  1) Abrir el fichero "index.html" y pulsar el botón "Jugar" cuando apareza.
+
+  2) Para cada pregunta, observar la foto y hacer click en el mapa donde se considere que está la estatua.
+     Un marcador rojo aparecerá. Al pulsarlo aparecerán sus coordenadas.
+
+  3) Cuando se esté seguro, pulsar el botón "Confirmar respuesta". Un marcador azul aparecerá con la posición
+     real de la estatua de la foto. Al pulsarlo aparecerá el nombre y las coordenadas de la estatua.
+     Siempre y cuando el marcador del usuario esté a 500 metros o menos de la ubicación real, se sumarán puntos.
+
+  4) Usar las flechas para desplazarse entre preguntas. Se pueden contestar en cualquier orden.
+
+  5) Una vez en la última pregunta y con todas las demás contestadas, pulsar el botón "Finalizar" para ver un resumen
+     de los resultados.
+
+  Hay un total de 15 imágenes en el juego. Cada partida muestra 8 imágenes aleatorias a adivinar.

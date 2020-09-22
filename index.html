@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Busca Foto - UO251436</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style/main.css">
+  <link rel="stylesheet" href="style/home.css">
+
+  <noscript>Necesitas activar JavaScript para jugar.</noscript>
+
+</head>
+
+<body>
+
+  <div id="main">
+    <article class="home">
+      <section class="transparent title-container">
+        <h1 class="title">Buscar foto</h1>
+        <h3 class="title">Sistemas de Información Geográfica y Servicios Web</h3>
+      </section>
+      <section class="transparent author-container">
+        <address>
+          Hecho por <a target="_blank" href="mailto:uo251436@uniovi.es">Eduardo Ulibarri Toledo</a>.<br>
+          Máster en Ingeniería Web - Universidad de Oviedo
+        </address>
+      </section>
+
+      <section class="transparent btn-container">
+        <form action="game.html">
+          <input type="submit" value="Jugar" />
+        </form>
+      </section>
+
+    </article>
+
+    <footer class="footer">
+      <a target="_blank" href="https://github.com/ulitol97/SIG-GeoGuessr"><em class="fa fa-github"></em></a> Eduardo
+      Ulibarri Toledo (UO251436)
+    </footer>
+
+  </div>
+
+  <!-- JS -->
+  <script>
+
+    const transtitionLenght = 0.75
+    window.addEventListener("load", () => {
+      document.querySelector(".title-container.transparent").classList.replace("transparent", "opaque")
+
+      setTimeout(() => {
+        document.querySelector(".author-container.transparent").classList.replace("transparent", "opaque")
+        setTimeout(() => {
+          document.querySelector(".btn-container.transparent").classList.replace("transparent", "opaque")
+        }
+          , transtitionLenght * 1000
+        )
+      }
+        , transtitionLenght * 1000
+      )
+    })
+  </script>
+
+</body>
+
+</html>
