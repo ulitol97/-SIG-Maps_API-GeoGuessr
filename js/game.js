@@ -6,7 +6,7 @@ let timeInterval;
 // Game data
 const maxDistance = 500;
 let currentQuestion = 1;
-let nQuestions = 2;
+let nQuestions = 8;
 let currentScore = 0;
 let answers = []; // answers: {answered: Bool, visited: Bool, statue: Statue, score: Int}
 
